@@ -22,8 +22,7 @@ body {
 /* Intro */
 .intro {
     width: 100%;
-    height: 100vh;
-    padding-top: 110px;
+    padding: 110px 0 130px 0;
     background-color: #de2b24 ;
     background-size: cover;
     text-align: center;
@@ -64,17 +63,33 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    background-color: #f35e59;
 }
 
 .slider__item {
-    width: 25%;
+    width: 256px;
+    height: 254px;
+    background-color: #f35e59;
 }
 
 .slider__img {
     overflow: hidden;
-    max-height: 254px;
+    height: 254px;
+    position:relative;
+}
+.slider__img img{
+    position:absolute;
+    left:-100px;
+}
+
+.slider__img:hover {
+    border-radius: 10px;
+    transform: translate(-10px,-10px);
+    transition-duration: 450ms;
+    filter: grayscale(1);
+}
+
+.slider__logo {
+    padding-top: 75px;
 }
 
 .slider__title {
@@ -90,8 +105,7 @@ body {
 /* Middle */
 .middle {
     width: 100%;
-    height: 100vh;
-    padding-top: 100px;
+    padding: 100px 0 110px 0;
     background-color: #1287bf ;
     background-size: cover;
     text-align: center;
@@ -163,9 +177,7 @@ input[type="text"], input[type="tel"]{
     cursor: pointer;
     border-radius: 4px;
 }
-.dws__submit:hover {
-    color: #1287bf;
-}
+
 .dws__text {
     font-size: 15px;
     font-weight: 300;
@@ -177,8 +189,7 @@ input[type="text"], input[type="tel"]{
 /* Last */
 .last {
     width: 100%;
-    height: 50vh;
-    padding-top: 80px;
+    padding: 80px 0 80px 0;
     background-color: #2a2a2a ;
     background-size: cover;
     text-align: center;
@@ -243,6 +254,7 @@ input[type="email"]:hover {
     border-color: #de2b24;
 }
 
+/* Footer */
 .footer {
     background-color: #515151;
     height: 67px;
